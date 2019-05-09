@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced. -->
+<div> Months :
+  <select  (change) = "changemonths($event)">
+     <option *ngFor = "let i of months">{{i}}</option>
+  </select>
+</div>
+<br/>
+<div>
+   <span *ngIf = "isavailable; else condition1">Condition is valid.</span>
+   <ng-template #condition1>Condition is invalid</ng-template>
+</div>
+<button (click) = "myClickFunction($event)">Click Me</button>
+
+<div style="text-align :center">
+<h1>Custom Pipe</h1>
+<b>Square root of 25 is: {{25 | sqrt}}</b>
+<br/>
+<b>Square root of 729 is: {{729 | sqrt}}</b>
+</div>
+<div>
+<ul *ngFor = "let data of httpdata">
+  <li>Name : {{data.name}} Address: {{data.address.city}}</li>
+</ul>
+</div>
+<div>
+  {{name}}
+</div>
+
+<button (onclick)="fireEvent()"> Send Event </button>
